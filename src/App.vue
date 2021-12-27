@@ -4,6 +4,7 @@
       <Navbar />
       <v-container>
 <StockTable />
+<NewStockTable />
       </v-container>
       
     </v-main>
@@ -13,13 +14,15 @@
 <script>
 import Navbar from "./components/navbar";
 import StockTable from "./components/stockTable";
+import NewStockTable from "./components/newStockTable";
 
 export default {
   name: "App",
 
   components: {
     Navbar,
-    StockTable
+    StockTable,
+    NewStockTable
   },
 
   data: () => ({

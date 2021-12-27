@@ -11,7 +11,7 @@
     </v-card-title>
     <v-data-table
       :headers="headers"
-      :items="stocks"
+      :items="stocks"  
       :search="search"
       class="elevation-1"
     >
@@ -62,11 +62,12 @@ export default {
     // If there are it gets rid of the dupicate word.
     let wordArr = [];
 
-    for (let words in this.comments) {
-      wordArr[words] = [...new Set(this.comments[words])];
-    }
+    // for (let words in this.comments) {
+    //   wordArr[words] = [...new Set(this.comments[words])];
+    // }
 
-    wordArr = wordArr.flat();
+    // wordArr = wordArr.flat();
+    wordArr = this.comments.flat();
     let url = "";
 
     for (let symbol in this.symbolsObject) {
